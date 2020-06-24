@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    """
+    Возвращает главную страницу
+    :return:
+    """
     return render_template('form-city.html')
 
 
