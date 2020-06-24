@@ -16,6 +16,10 @@ def index():
 
 @app.route('/get-card', methods=['POST'])
 def get_card():
+    """
+    Возвращает карту пользователю
+    :return:
+    """
     city = request.form.get('city')
     layer = request.form.get('layer')
     print(city, layer)
