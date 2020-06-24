@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{{ url_for('get_card') }}" method="post">
+    <label for="city-input">Название города:</label>
+    <input type="text" name="city" id="city-input">
+    <br>
+    <label for="layer">Выберите режим отображения карты</label>
+    <select name="layer" id="layer">
+        <option value="map">Схема</option>
+        <option value="sat">Спутник</option>
+        <option value="sat,skl">Гибрид</option>
+    </select>
+    <br>
+    <button type="submit" class="btn btn-secondary">Получить изображение!</button>
+</form>
+
+{% endblock content %}
+
